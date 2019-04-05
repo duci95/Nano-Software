@@ -1,0 +1,566 @@
+*{
+    font-family: "Segoe UI semibold";
+    font-size: 17px;
+    padding:0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color:white;
+}
+#wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1300px 1fr;
+    grid-template-areas:
+    ". header ."
+    ". content ."
+    ". footer .";
+}
+#header{
+    display: grid;
+    grid-area: header;
+    grid-template-columns:1fr 80px 650px 300px 1fr;
+    grid-template-areas:
+    ". logo navigation btn .";
+    background-color: #e8edef;
+    max-height:130px;
+}
+#logo{
+    padding:10px 10px;
+    justify-self: flex-start;
+}
+/*navigacija start*/
+/*navigacija -> linkovi*/
+#navigation{
+    grid-area:navigation;
+    display:grid;
+    max-height:20px;
+    justify-self: flex-start;
+}
+#navigation-ul{
+    grid-area:navigation-ul;
+    display: grid;
+    grid-template-columns:100px 100px 100px 100px 100px;
+    grid-column-gap: 25px;
+    padding:50px 0;
+
+}
+#navigation-ul > li > a{
+    text-decoration: none;
+    background-color:rgb(61, 120, 179);
+    padding:55px 15px;
+    color:white;
+    border-radius: 6px;
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#navigation-ul  ul{
+    background-color: #14a1e2;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    padding:5px 10px;
+    margin:0 auto;
+
+}
+#navigation-ul ul li a {
+    font-size: 14px;
+    color: white;
+}
+
+ li {
+    list-style-type:none;
+}
+#navigation-ul > li > a:hover{
+    background-color: #14a1e2;
+}
+
+/*navigacija -> registracija i prijava*/
+#btn{
+    display:grid;
+    grid-area:btn;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:"reg login";
+    justify-items: center;
+    align-self: center;
+
+}
+.btnRegLog{
+    padding: 10px;
+    color:white;
+    cursor: pointer;
+    background-color:rgb(61, 120, 179);
+    font-family: 'Segoe UI Semibold';
+    font-size: inherit;
+    border: 1px solid rgb(28, 108, 122);
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.btnUser{
+    padding:5px ;
+    color:white;
+    cursor: pointer;
+    background-color:rgb(61, 120, 179);
+    font-family: 'Segoe UI Semibold';
+    font-size: inherit;
+    border: 1px solid rgb(28, 108, 122);
+
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.btnHover:hover{
+   background-color: #14a1e2;
+}
+/*navigacija end*/
+
+/* content */
+#content{
+    display:grid;
+    grid-area: content;
+    grid-template-columns: 150px 820px 350px;
+    grid-template-areas: "left center right";
+
+}
+#leftContent{
+    grid-area: left;
+    margin-top:20px;
+    background-color: #e8edef;
+    padding-top:50px;
+}
+#center{
+    grid-area: center;
+}
+#rightContent{
+    grid-area: right;
+}
+
+.textBoxReg{
+    padding:5px 0px;
+    border-radius: 2px;
+}
+#userInfoHidden{
+    background-color: #14a1e2;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    padding:5px 10px;
+    margin:50px 0px;
+    position:fixed;
+    top:-9px;
+    left:1035px;
+}
+#userInfoHidden li a:hover{
+    background-color: #14a1e2;
+}
+#userInfoHidden a{
+    font-size: 14px;
+    color:white;
+}
+#userInfoHidden a:hover{
+    border-bottom: 1px solid white;
+}
+.criteria{
+    background-color: white;
+    color:rgb(61, 120, 179);
+    padding-top:5px;
+    width:100%;
+    font-size: 16px;
+    font-family: "Segoe UI";
+}
+.price{
+    width:90px;
+}
+#searchPrice{
+    margin-bottom: 20px;
+    width:146px;
+}
+.footer{
+    grid-area: footer;
+    text-align: center;
+    margin-top:20px;
+    background-color: #e8edef;
+    width:100%;
+    color:#14a1e2;
+}
+#footer h6{
+    font-size: 16px;
+}
+#containerIndex{
+    display:grid;
+    margin-left:20px;
+    grid-template-areas:
+            "top"
+            "imgSoft";
+}
+.baner{
+    background-color: #e8edef;
+    margin:20px;
+    text-align: center;
+    color:rgb(61, 120, 179);
+    align-items: center;
+}
+.baner h2{
+    font-size:25px;
+    text-transform: uppercase;
+    border:3px solid rgb(61, 120, 179);
+    border-radius: 6px;
+}
+#imgSoft{
+    grid-area: imgSoft;
+    margin-right:250px;
+    position: relative;
+    left:120px;
+}
+.cycle1{
+    height:500px;
+    border:2px inset rgb(61, 120, 179);
+    border-radius:6px;
+}
+.cycle1 img{
+    position:relative;
+}
+
+#leftContent li {
+    margin-bottom: 25px;
+}
+
+#leftContent ul{
+    margin-bottom:0px;
+}
+#leftContent a {
+    color: rgb(61, 120, 179);
+    padding-left: 20px;
+    margin-top:20px;
+    border-bottom: 2px solid white;
+}
+#leftContent a:hover{
+    color:#14a1e2;
+}
+#sponzori img{
+    position: relative;
+    left:50px;
+    border-radius: 6px;
+}
+/*kontakt forma*/
+#kontakt{
+    width:400px;
+    position:relative;
+    left:-240px;
+    margin:5px auto;
+    text-align:justify;
+    padding:5px;
+}
+#kontakt input[type="text"]{
+    margin-bottom: 10px;
+}
+#kontakt_forma{
+    width:500px;
+    text-align:center;
+    margin:0px auto;
+    position: relative;
+    top:20px;
+    left:200px;
+    padding:20px;
+}
+#kontakt_forma input {
+    padding:5px;
+    border-radius:5px;
+    width:200px;
+}
+#ime_korisnik{
+    width:60%;
+}
+#prezime_korisnik{
+    width:60%;
+}
+textarea{
+    margin-top:20px;
+    width:400px;
+    height:250px;
+    min-height: 250px;
+    max-height: 250px;
+    min-width: 400px;
+    max-width: 400px;
+    border-radius:10px;
+    padding:2px 5px;
+    font-size:18px;
+    margin-bottom: 5px;
+}
+#autor{
+    width:700px;
+    min-height:344px;
+    margin:0px auto;
+    position: relative;
+    top:100px;
+    left:20px;
+    margin-bottom:36px;
+}
+#autor_slika{
+    position:relative;
+    top:-10px;
+    float:left;
+    margin-top:15px;
+    margin-bottom:20px;
+}
+#autor_slika img{
+    border-radius:20px;
+}
+#autor_tekst h4{
+    text-align: justify;
+    color:rgb(61, 120, 179);
+    padding:10px;
+    font-size:20px;
+    background-color:#e8edef ;
+}
+#autor_tekst{
+    width:400px;
+    float:right;
+    border-radius:20px;
+    padding:10px;
+    font-size: 17px;
+    margin-top:30px;
+}
+#leftContent form {
+    font-size: 15px;
+    color: rgb(61, 120, 179);
+}
+#leftContent label{
+    font-size: 14px;
+    position: relative;
+    left:20px;
+}
+#leftContent input[type=radio]{
+    position: relative;
+    left: 20px;
+}
+#card{
+    width: 100%;
+    margin: 0 auto;
+}
+#card .baner{
+    background-color: #e8edef;
+    width:90%;
+    position: relative;
+    left:30px;
+}
+.products{
+    width:80%;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "product product product";
+}
+.product{
+    background-color: #e8edef;
+    display:grid;
+    width: 200px;
+    grid-template-rows :1fr ;
+    grid-template-areas:
+            "productImage"
+            "productInfo"
+            "productOptions";
+    margin-right: 10px;
+    border: 1px solid #7cbcd6;
+    padding: 5px 10px;
+    margin-bottom:10px;
+    margin-top:30px;
+}
+.productImage{
+    grid-area: productImage;
+    text-align: center;
+}
+.productInfo{
+    grid-area: productInfo;
+    font-size: 14px;
+    color: #14a1e2;
+}
+.productInfo h3{
+    font-size: 19px;
+    margin-bottom: 2px;
+}
+.productInfo h4{
+    font-size:15px;
+}
+.productInfo h5 {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.productOptions{
+    grid-area: productOptions;
+    text-align: center;
+    margin-bottom: 2px;
+}
+.btnProduct{
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    padding:3px 10px;
+    color:white;
+    background-color:rgb(61, 120, 179);
+    margin: 0 auto;
+}
+.btnProduct:hover{
+    background-color: #14a1e2;
+}
+#userBuy{
+    margin-right:10px;
+    margin-bottom:3px;
+}
+.product h4{
+    text-align:left;
+    font-size: 17px;
+}
+.product  p{
+    text-align: center;
+    font-size: 15px;
+}
+#logoChange{
+    text-align: left;
+}
+#admin{
+    text-align: right;
+    position:relative;
+    top:-40px;
+}
+#popular{
+    padding-top:10px;
+    padding-bottom: 20px;
+}
+.link{
+    width:100px;
+}
+.ok{
+    font-size:15px;
+    color:rgb(61, 120, 179);
+    word-break: break-word;
+    text-align:justify;
+}
+.adminInfo{
+  color:palegreen;
+}
+#control{
+    position:relative;
+    left:70px;
+}
+a:visited{
+   color:lightgoldenrodyellow;
+}
+#error{
+    margin-top: 20px;
+    margin-left:10px;
+}
+#maxwidth h2{
+    height: 390px;
+    font-size: 80px;
+    margin: 0 auto;
+    text-align: justify-all;
+    padding: 0px 40px 40px 40px;
+}
+#grid {
+     background-color: dodgerblue;
+    display: inline-grid;
+    color: white ;
+    margin-right: 30px;
+    padding:20px;
+    grid-template-columns: 1fr ;
+    margin-bottom: 40px;
+    margin-left: 20px;
+    margin-top:30px;
+    width:200px;
+}
+#grid .btnProduct{
+    margin-right: 10px;
+    margin-top: 10px;
+}
+.adminInsert{
+    padding:4px;
+    position:relative;
+    top:-5px;
+}
+#mform{
+    position:relative;
+    left:-460px;
+    top:-20px;
+}
+.adminDeleteUser{
+    background:red;
+}    
+}

@@ -1,0 +1,221 @@
+*{
+    font-family: "Segoe UI semibold";
+    font-size: 17px;
+    padding: 0;
+    margin:0;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    color:royalblue;
+}
+#wrapper{
+    display:grid;
+    grid-template-columns: 1fr 1300px 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+            ". header ."
+            ". content ."
+            ". footer .";
+}
+#header{
+    display: grid;
+    grid-area: header;
+    grid-template-columns:1fr 80px 700px 350px 1fr;
+    grid-template-areas:
+            ". logo navigation btn .";
+    background-color: #e8edef;
+}
+#logo{
+    padding:10px 10px;
+    justify-self: flex-start;
+}
+/*navigacija start*/
+/*navigacija -> linkovi*/
+#navigation{
+    grid-area:navigation;
+    display:grid;
+    max-height:20px;
+    justify-self: flex-start;
+}
+#navigation-ul{
+    grid-area:navigation-ul;
+    display: grid;
+    grid-template-columns:100px 100px 100px 100px 100px;
+    grid-column-gap: 25px;
+    padding:50px 0;
+
+}
+#navigation-ul > li > a{
+    text-decoration: none;
+    background-color:rgb(61, 120, 179);
+    padding:55px 15px;
+    color:white;
+    border-radius: 6px;
+    text-align: center;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+#navigation-ul  ul{
+    background-color: #14a1e2;
+    border-radius: 6px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    padding:5px 10px;
+    margin:0 auto;
+
+}
+#navigation-ul ul li a{
+    font-size: 14px;
+    color:white;
+}
+#navigation-ul ul a:hover{
+    border-bottom: 1px solid white;
+}
+#navigation #navigation-ul li {
+    list-style-type:none;
+}
+#navigation-ul > li > a:hover{
+    background-color: #14a1e2;
+}
+#softwareHidden {
+
+    width:100px;
+    position: relative;
+    margin:0 auto;
+    top:-80px;
+    right:15px;
+
+}
+#hardwareHidden{
+    width:120px;
+    position: relative;
+    margin:0 auto;
+    top:-80px;
+    right:26px;
+}
+/*navigacija -> registracija i prijava*/
+#btn{
+    display:grid;
+    grid-area:btn;
+    grid-template-columns:1fr 1fr;
+    grid-template-areas:"reg login";
+    justify-items: center;
+    align-self: center;
+}
+.btnRegLog{
+    padding: 10px;
+    color:white;
+    cursor: pointer;
+    background-color:rgb(61, 120, 179);
+    font-family: 'Segoe UI Semibold';
+    font-size: inherit;
+    border: 1px solid rgb(28, 108, 122);
+    margin-bottom: 10px;
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.btnUser{
+    padding:5px ;
+    color:white;
+    cursor: pointer;
+    background-color:rgb(61, 120, 179);
+    font-family: 'Segoe UI Semibold';
+    font-size: inherit;
+    border: 1px solid rgb(28, 108, 122);
+
+    text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -moz-box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    box-shadow:0px 1px 6px 4px rgba(0, 0, 0, 0.07) inset,
+    0px 0px 0px 3px rgb(254, 254, 254),
+    0px 5px 3px 3px rgb(210, 210, 210);
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+}
+.btnHover:hover{
+    /*background: rgb(74, 225, 240); boja za regularni izraz*/
+    background-color: #14a1e2;
+}
+/*navigacija end*/
+
+/* content */
+#content{
+    display:grid;
+    grid-area: content;
+    grid-template-columns: 250px 800px 250px;
+    grid-template-areas: "left center right";
+}
+#left{
+    grid-area: left;
+}
+#center{
+    grid-area: center;
+
+}
+#right{
+    grid-area: right;
+}
+/* footer*/
+#footer{
+    grid-area: footer;
+    display:grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+}
+#footer h6{
+    font-size: 16px;
+    text-align: center;
+}
+.textBoxReg{
+    padding:5px 0px;
+    border-radius: 2px;
+}
+
